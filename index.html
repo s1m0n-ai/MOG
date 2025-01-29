@@ -1,0 +1,539 @@
+<!DOCTYPE html><html><head>
+  <title> 8BIT MOG - $MOG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/lgnobgfinal.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link href="css/flowbite.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            // adjust speed according to your need
+            marquee: 'marquee 10s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(100%)' },
+              '100%': { transform: 'translateX(-200%)' },
+            }
+          }
+        }
+      },
+      variants: {
+        extend: {
+          animation: ['hover', 'focus'],
+        }
+      },
+
+    },
+
+
+  </script>
+
+
+
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <link href="css/aos_1.css" rel="stylesheet">
+  <script src="js/aos.js"></script>
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  <script src="js/howler.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/d7c1773dd4.js" crossorigin="anonymous"></script>
+
+
+
+
+</head>
+
+
+<body>
+  <script>
+    // use a script tag or an external JS file
+    document.addEventListener("DOMContentLoaded", (event) => {
+     gsap.registerPlugin(MotionPathPlugin)
+
+   
+
+// The start and end positions in terms of the page scroll
+const offsetFromTop = innerHeight * 0.75;
+const pathBB = document.querySelector("#path").getBoundingClientRect();
+const startY = pathBB.top - innerHeight + offsetFromTop;
+const finishDistance = startY + pathBB.height - offsetFromTop;
+
+// the animation to use
+var tween = gsap.to("#rec", {
+  duration: 10, 
+  paused: true,
+  ease: "none",
+  motionPath: {
+    path: "#path",
+    align: "#path",
+    autoRotate: true,
+    alignOrigin: [1, 1]
+  }    
+}).pause(0.001);
+
+// Listen to the scroll event
+document.addEventListener("scroll", function() {
+  // Prevent the update from happening too often (throttle the scroll event)
+  if (!requestId) {
+    requestId = requestAnimationFrame(update);
+  }
+});
+
+update();
+
+function update() {
+  // Update our animation
+  tween.progress((scrollY - startY) / finishDistance);
+  
+  // Let the scroll event fire again
+  requestId = null;
+}
+     // gsap code here!
+    });
+   
+   </script>
+
+  <!-- <div id="rec"></div>
+  <svg fill="none" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 1300 3000">
+    <path id="path" d="M143.78,431.83c103.76,235.99,223.54,324.48,318.04,360c143.34,53.87,223.51-16.03,379,51.84 c136.54,59.6,292.87,208.71,272.99,325.44c-25.74,151.18-320.87,94.36-612.23,336.96c-155.68,129.63-367.75,392.59-331.29,624.96 c43.59,277.79,443.64,520.03,985.93,492.48" stroke="black" stroke-width="8"/>
+  </svg>
+ 
+  </div>
+  </div> -->
+
+
+
+  <div class="vidwrap2">
+    <!-- <video id="hero-vid2" autoplay="" muted="" playsinline="" src="./galaxy6.mp4" speed="0.5"
+      type="video/mp4"></video> -->
+    <!-- <img src="./islandbg.jpg" id="hero-vid2" /> -->
+    <img src="images/pixelbg.png" id="hero-vid2">
+
+
+  </div>
+
+
+  <div class="wrapper">
+
+
+    <!-- <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>
+          <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+            <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+          </div>
+        </div>
+      </div> -->
+    <!-- 
+    <div class="grid grid-cols-5 gap-1  sm:grid-cols-5 topnav">
+      <div><img src="./ejmainlg.png" class="logoimg" /> </div>
+      <div>
+        <h2>Uniswap</h2>
+      </div>
+      <div>
+        <h2>Dextools</h2>
+      </div>
+      <div>
+        <h2>X</h2>
+      </div>
+      <div>
+        <a href="https://t.me/MOGSolChat">  <h2>Telegram</h2></a>
+      </div>
+    </div> -->
+
+    <div class="divider smnone"></div>
+    <!-- <div class="divider"></div> -->
+    <div class="mainwrap">
+      <div class="grid grid-cols-1 gap-0  sm:grid-cols-1 topwrap">
+
+
+        <!-- <div class="divider"></div> -->
+        <div class="grid grid-cols-1 gap-0  md:grid-cols-1 xl:grid-cols-2 topimg ">
+          <div>
+            <div class="divider smshow"></div>
+            <img src="images/bannernobg.png" class="mainb" data-aos="zoom-in" data-aos-duration="1100">
+            <!-- <div class="subtitle" data-aos="fade-up" data-aos-duration="1100">
+            <em>Your cheerful furry friend!</em>
+          </div> -->
+
+<div class="row">
+  <div class="grid grid-cols-2 gridsocial gap-2" data-aos="fade-up" data-aos-duration="1100">
+    <div>
+      <a href="https://x.com/M0G_MEME">Twitter</a> 
+    
+    </div>
+
+    <div>
+      <a href="https://t.me/MOG_MEME">Telegram Channel</a>
+    </div>
+    <div>
+      <a href="https://t.me/M0G_CHAT">Telegram Chat</a>
+    </div>
+    <div>
+      <a href="https://www.dextools.io/app/en/ether/pair-explorer/CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump">Dextools</a>
+    </div>
+  </div>
+</div>
+
+            <!-- <div class="divider"></div> -->
+<!-- 
+            <ul class="flex flex-wrap items-center justify-center text-gray-900 dark:text-white soc socchange"
+              data-aos="fade-up" data-aos-duration="1100">
+              <li>
+
+                <a href="https://x.com/MOGSolGame" target="_blank" class=""><img src="./xicon.png" /></a>
+
+
+              </li>
+              <li>
+                <a href="https://t.me/MOGSolChat" target="_blank" class=""><img src="./tgicon.png" /></a>
+              </li>
+         
+              <li>
+                <a href=" https://www.dextools.io/app/en/ether/pair-explorer/CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump" target="_blank" class=""><img src="/dex.png" /></a>
+              </li>
+
+              <li>
+                <a href=" https://app.uniswap.org/explore/tokens/ethereum/CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump" target="_blank" class=""><img style="margin-right: none!important;"
+                    src="/uniswap-uni-logo.svg" /></a>
+              </li>
+
+            </ul> -->
+
+
+
+            <!-- <div class="divider"></div> -->
+
+            <!-- <div class="divider smnone"></div> -->
+
+<div class="row cawrap">
+  <h3 class="catxt">Contract: CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump
+    
+    <button class="cabtn" onclick="myFunction()"><i class="fa-solid fa-copy"></i></button>
+  </h3>
+
+
+  <!-- copyca start -->
+
+  <input type="text" value="CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump" style="display: none;" id="myInput">
+
+
+  <script>
+      function myFunction() {
+        // Get the text field
+        var copyText = document.getElementById("myInput");
+
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
+
+        // Alert the copied text
+        alert("Contract copied!");
+      }
+  </script>
+
+
+  <!-- copyca end-->
+
+
+</div>
+
+
+
+          </div>
+
+          <div>
+            <!-- <div class="divider"></div> -->
+            <img src="images/lgnobgfinal.png" class="largelogo" data-aos="zoom-in" data-aos-duration="1100">
+          </div>
+
+        </div>
+        <!-- <div class="divider"></div> -->
+
+        <!-- <div class="row flex gap-3 xl:gap-10 socials">
+        <a href="https://t.me/MOGSolChat">
+        <button
+          class="rounded-md"
+          type="button"
+        >
+        <i class="fa-brands fa-telegram"></i>
+        </button>
+      </a>
+      <a href="https://x.com/MOGSolGame">
+        <button
+          class="rounded-md"
+          type="button"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </button>
+      </a>
+      <a href="https://www.dextools.io/app/en/ether/pair-explorer/CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump">
+        <button
+          class="rounded-md"
+          type="button"
+        >
+          Dextools
+        </button>
+      </a>
+    
+      </div> -->
+
+
+      </div>
+    </div>
+
+    
+    <div class="sep"></div>
+
+    <!--    
+    <div class="divider"></div> -->
+    <div class="grid grid-cols-1 gap-20  md:grid-cols-1 l:grid-cols-2 xl:grid-cols-2 first ">
+
+      <div>
+        <!-- <div class="divider"></div> -->
+        <img src="images/bitabout2.png" data-aos="fade-up" data-aos-duration="1100" class="mauto filterblack">
+        <div class="divider"></div>
+        <p class="transition-opacity duration-700 ease-in-out opacity-100" data-aos="fade-right" data-aos-duration="1100">
+
+
+          The  version of the MOG meme coin adds a playful, retro twist with classic pixel art, bringing back the
+          old-school video game vibe.
+        </p>
+
+
+      </div>
+      <div>
+        <img src="images/lgcash1new.png" data-aos="fade-left" data-aos-duration="1700">
+      </div>
+
+
+   
+
+      <!-- <div class="divider"></div> -->
+    </div>
+    <div class="grid grid-cols-1 gap-1  md:grid-cols-1 l:grid-cols-2 xl:grid-cols-2 first ">
+      <div class="vidwrap">
+        <video id="vid" autoplay="" muted="" loop="" playsinline="" src="media/welcomemog.mp4" speed="0.5" type="video/mp4"></video>
+       
+    
+    
+      </div>
+
+      <div>
+        <a href="https://game.8bitmog.xyz/">
+        <h1 class="gametxt">
+          
+        Play the  MOG game!
+
+        <i class="fa-solid fa-arrow-pointer"></i>
+      </h1>
+    </a>
+      </div>
+    
+      </div>
+      <div class="divider"></div>
+    <div class="sep"></div>
+    <!-- <div class="divider smnone"></div> -->
+
+    <div class="featwrap">
+      <div class="row">
+        <div class="grid grid-cols-1 xl:grid-cols-1 sm:grid-cols-1">
+          <div>
+            <img src="images/bittokenomics.png" class="filterblack" data-aos="fade-up" data-aos-duration="1100">
+          </div>
+          <div class="divider"></div>
+
+        </div>
+      </div>
+
+
+
+      <div class="row">
+    <div class="grid grid-cols-1 xl:grid-cols-3 sm:grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="featcontent" data-aos="fade-up" data-aos-duration="1100">
+            <h1>No Tax</h1>
+            <img src="images/lg2.png" alt="No Tax">
+        </div>
+
+        <div class="featcontent" data-aos="fade-up" data-aos-duration="1100">
+            <h1>Burned Liquidity</h1>
+            <img src="images/lg3.png" alt="Burned Liquidity">
+        </div>
+
+        <div class="featcontent" data-aos="fade-up" data-aos-duration="1100">
+            <h1>1 Billion Supply</h1>
+            <img src="images/lgcash4.png" alt="1 Billion Supply">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="grid grid-cols-1 xl:grid-cols-1 sm:grid-cols-1">
+        <div>
+            <img src="images/bitart.png" class="filterblack" data-aos="fade-up" data-aos-duration="1100">
+        </div>
+        <div class="divider"></div>
+    </div>
+</div>
+
+ 
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4 sm:grid-cols-2 xl:grid-cols-5 second" data-aos="fade-right" data-aos-duration="1100">
+    <div><img src="images/1%284%29.jpg"></div>
+    <div><img src="images/2.jpg"></div>
+    <div><img src="images/3.jpg"></div>
+    <div><img src="images/4.jpg"></div>
+    <div><img src="images/5.jpg"></div>
+    <div><img src="images/6.jpg"></div>
+    <div><img src="images/7.jpg"></div>
+    <div><img src="images/8.jpg"></div>
+    <div><img src="images/9.jpg"></div>
+
+
+    <!-- <div><img src="./gallery/m16.jpg" /></div> -->
+    <div><img src="images/10.jpg"></div>
+    <div><img src="images/11.jpg"></div>
+    <div><img src="images/12.jpg"></div>
+    <div><img src="images/13.jpg"></div>
+    <div><img src="images/14.jpg"></div>
+    <div><img src="images/15.jpg"></div>
+    <div><img src="images/16.jpg"></div>
+    <div><img src="images/17.jpg"></div>
+
+    <div><img src="images/18.jpg"></div>
+    <div><img src="images/19.jpg"></div>
+    <div><img src="images/20.jpg"></div>
+
+
+  </div>
+
+
+  
+    <div class="divider smnone"></div>
+
+
+    <!-- <div class="divider smnone"></div> -->
+
+  
+
+    <div class="divider"></div>
+
+    
+
+    <div class="row lastsec">
+
+      <img src="images/lgnobgfinal.png" class="mauto">
+      <h1 class="sectiontitle5">Join the  MOG fam!</h1> <br>
+    <p style="text-align: center; font-size: calc(20px + 1vw); color: white; text-shadow: 0 3px 6px black;"></p>
+
+      <div class="divider"></div>
+
+      <!-- <ul class="flex flex-wrap items-center justify-center text-gray-900 dark:text-white soc socchange">
+        <li>
+
+          <a href="https://x.com/MOGSolGame" target="_blank" class=""><img src="./xicon.png" /></a>
+
+
+        </li>
+        <li>
+          <a href="https://t.me/MOGSolChat" target="_blank" class=""><img src="./tgicon.png" /></a>
+        </li>
+       
+        <li>
+          <a href=" https://www.dextools.io/app/en/ether/pair-explorer/CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump" target="_blank" class=""><img src="/dex.png" /></a>
+        </li>
+
+        <li>
+          <a href=" https://app.uniswap.org/explore/tokens/ethereum/CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump" target="_blank" class=""><img style="margin-right: none!important;"
+              src="/uniswap-uni-logo.svg" /></a>
+        </li>
+
+      </ul> -->
+
+      <div class="row mauto" style="max-width: 1400px;">
+        <div class="grid grid-cols-2 gridsocial gap-2 ">
+          <div>
+            <a href="https://x.com/M0G_MEME">Twitter</a> 
+          
+          </div>
+      
+          <div>
+            <a href="https://t.me/MOG_MEME">Telegram Channel</a>
+          </div>
+          <div>
+            <a href="https://t.me/M0G_CHAT">Telegram Chat</a>
+          </div>
+          <div>
+            <a href="https://www.dextools.io/app/en/ether/pair-explorer/CgWa6gj1a4JrA82LQ7KRfhZ2riL3Rb4t2p6RXQgSump">Dextools</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+    </div>
+
+
+    <!-- <div class="inline">
+  <img src="./gradej.png" class="gicon" />
+  <img src="./gradej2.png" />
+</div> -->
+    <!-- <div class="divider"></div> -->
+
+    <script src="js/clipboard.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll('.opacity-0');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove('opacity-0');
+              entry.target.classList.add('opacity-100');
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+
+        elements.forEach(element => observer.observe(element));
+      });
+
+
+    </script>
+    <script src="js/flowbite.min.js"></script>
+    <script src="js/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.modal.min.css">
+    <script src="js/jquery.min_1.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script>
+     let vid = document.getElementById("hero-vid2");
+     vid.playbackRate = 0.8;
+  </script> -->
+
+    <script>
+      AOS.init({
+        once: true
+      });
+
+    </script>
+  </div>
+
+  <script src="js/gsap.min.js"></script>
+
+<script src="js/MotionPathPlugin.min.js"></script>
+
+
+
+</div></body></html>
